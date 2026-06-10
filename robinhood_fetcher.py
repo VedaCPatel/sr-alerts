@@ -51,7 +51,6 @@ def get_portfolio_tickers() -> list:
         print(f"  WARNING: Could not fetch portfolio: {e}")
         return []
 
-
 def get_watchlist_tickers() -> list:
     tickers = []
     try:
@@ -67,6 +66,8 @@ def get_watchlist_tickers() -> list:
     except Exception as e:
         print(f"  WARNING: Could not fetch watchlists: {e}")
     return tickers
+
+
 
 
 def save_tickers(tickers: list) -> None:
