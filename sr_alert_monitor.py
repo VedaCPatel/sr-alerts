@@ -30,7 +30,7 @@ from sr_zones_module import get_sr_zones, FINNHUB_API_KEY, ROUND_DECIMALS
 
 DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 COOLDOWN_MINUTES    = 30
-ZONE_CACHE_MINUTES  = 15
+ZONE_CACHE_MINUTES  = 60
 
 _DIR             = os.path.dirname(os.path.abspath(__file__))
 TICKERS_FILE     = os.path.join(_DIR, "tickers.json")
