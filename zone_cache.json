@@ -1,78 +1,78 @@
 {
   "AAPL": {
     "ticker": "AAPL",
-    "current_price": 289.295,
-    "computed_at": "2026-06-10T14:39:21.531159+00:00",
+    "current_price": 292.755,
+    "computed_at": "2026-06-10T17:44:03.975328+00:00",
     "support": {
       "center": 288.6242,
       "low": 287.4697,
       "high": 289.7787,
       "touches": 7,
-      "score": 1.2976
+      "score": 1.2534
     },
     "resistance": {
       "center": 297.2353,
       "low": 296.0463,
       "high": 298.4242,
       "touches": 3,
-      "score": 0.6504
+      "score": 0.6282
     }
   },
   "AMZN": {
     "ticker": "AMZN",
-    "current_price": 240.875,
-    "computed_at": "2026-06-10T14:39:22.018596+00:00",
+    "current_price": 238.215,
+    "computed_at": "2026-06-10T17:44:04.227414+00:00",
     "support": {
-      "center": 224.4306,
-      "low": 223.5329,
-      "high": 225.3283,
-      "touches": 33,
-      "score": 2.059
+      "center": 224.5119,
+      "low": 223.6139,
+      "high": 225.41,
+      "touches": 36,
+      "score": 2.8395
     },
     "resistance": {
       "center": 251.7549,
       "low": 250.7479,
       "high": 252.7619,
       "touches": 23,
-      "score": 1.7919
+      "score": 1.7308
     }
   },
   "BABA": {
     "ticker": "BABA",
-    "current_price": 116.71,
-    "computed_at": "2026-06-10T14:39:22.291019+00:00",
+    "current_price": 115.77,
+    "computed_at": "2026-06-10T17:44:04.501974+00:00",
     "support": null,
     "resistance": {
       "center": 122.8267,
       "low": 122.3354,
       "high": 123.318,
       "touches": 3,
-      "score": 1.446
+      "score": 1.3967
     }
   },
   "BE": {
     "ticker": "BE",
-    "current_price": 250.235,
-    "computed_at": "2026-06-10T14:39:22.499059+00:00",
+    "current_price": 234.02,
+    "computed_at": "2026-06-10T17:44:04.679878+00:00",
     "support": {
-      "center": 249.236,
-      "low": 248.2391,
-      "high": 250.2329,
+      "center": 224.76,
+      "low": 223.861,
+      "high": 225.659,
       "touches": 2,
-      "score": 0.6729
+      "score": 0.0035
     },
     "resistance": {
-      "center": 266.5214,
-      "low": 265.4553,
-      "high": 267.5875,
-      "touches": 7,
-      "score": 1.0076
+      "center": 234.85,
+      "low": 233.9106,
+      "high": 235.7894,
+      "touches": 2,
+      "score": 0.0022
     }
   },
   "COF": {
     "ticker": "COF",
-    "current_price": 180.915,
-    "computed_at": "2026-06-10T14:39:23.008564+00:00",
+    "current_price": 178.525,
+    "computed_at": "2026-06-10T17:44:05.000392+00:00",
     "support": {
       "center": 172.1922,
       "low": 171.5034,
@@ -81,131 +81,131 @@
       "score": 0.0002
     },
     "resistance": {
-      "center": 183.1871,
-      "low": 182.4543,
-      "high": 183.9198,
+      "center": 183.1714,
+      "low": 182.4387,
+      "high": 183.9041,
       "touches": 39,
-      "score": 2.5233
+      "score": 2.4373
     }
   },
   "CRDO": {
     "ticker": "CRDO",
-    "current_price": 258.0,
-    "computed_at": "2026-06-10T14:39:23.335166+00:00",
+    "current_price": 241.12,
+    "computed_at": "2026-06-10T17:44:05.247956+00:00",
     "support": {
+      "center": 233.73,
+      "low": 232.7951,
+      "high": 234.6649,
+      "touches": 4,
+      "score": 1.1154
+    },
+    "resistance": {
       "center": 246.705,
       "low": 245.7181,
       "high": 247.6918,
       "touches": 2,
-      "score": 0.534
-    },
-    "resistance": null
+      "score": 0.5158
+    }
   },
   "ERO": {
     "ticker": "ERO",
-    "current_price": 26.13,
-    "computed_at": "2026-06-10T14:39:23.630054+00:00",
-    "support": {
-      "center": 25.7096,
-      "low": 25.6067,
-      "high": 25.8124,
-      "touches": 31,
-      "score": 1.8393
-    },
+    "current_price": 25.7,
+    "computed_at": "2026-06-10T17:44:05.494483+00:00",
+    "support": null,
     "resistance": {
-      "center": 27.2751,
-      "low": 27.166,
-      "high": 27.3842,
-      "touches": 26,
-      "score": 1.039
+      "center": 25.7549,
+      "low": 25.6519,
+      "high": 25.8579,
+      "touches": 30,
+      "score": 1.7767
     }
   },
   "FCX": {
     "ticker": "FCX",
-    "current_price": 64.27,
-    "computed_at": "2026-06-10T14:39:23.956061+00:00",
+    "current_price": 62.02,
+    "computed_at": "2026-06-10T17:44:05.724984+00:00",
     "support": {
+      "center": 58.5633,
+      "low": 58.329,
+      "high": 58.7976,
+      "touches": 48,
+      "score": 2.3045
+    },
+    "resistance": {
       "center": 62.6881,
       "low": 62.4373,
       "high": 62.9388,
       "touches": 14,
-      "score": 0.1906
-    },
-    "resistance": {
-      "center": 65.5364,
-      "low": 65.2742,
-      "high": 65.7985,
-      "touches": 10,
-      "score": 1.137
+      "score": 0.1841
     }
   },
   "GOOGL": {
     "ticker": "GOOGL",
-    "current_price": 365.113,
-    "computed_at": "2026-06-10T14:39:24.249335+00:00",
+    "current_price": 356.0,
+    "computed_at": "2026-06-10T17:44:06.019436+00:00",
     "support": {
       "center": 355.2582,
       "low": 353.8372,
       "high": 356.6792,
       "touches": 2,
-      "score": 0.754
+      "score": 0.7283
     },
     "resistance": {
       "center": 379.729,
       "low": 378.2101,
       "high": 381.2479,
       "touches": 3,
-      "score": 1.7069
+      "score": 1.6488
     }
   },
   "INTC": {
     "ticker": "INTC",
-    "current_price": 110.52,
-    "computed_at": "2026-06-10T14:39:24.552878+00:00",
+    "current_price": 105.54,
+    "computed_at": "2026-06-10T17:44:06.573038+00:00",
     "support": {
+      "center": 102.0772,
+      "low": 101.6689,
+      "high": 102.4855,
+      "touches": 2,
+      "score": 0.0863
+    },
+    "resistance": {
       "center": 106.375,
       "low": 105.9495,
       "high": 106.8005,
       "touches": 4,
-      "score": 0.6796
-    },
-    "resistance": {
-      "center": 115.884,
-      "low": 115.4205,
-      "high": 116.3475,
-      "touches": 5,
-      "score": 1.1763
+      "score": 0.6565
     }
   },
   "LMND": {
     "ticker": "LMND",
-    "current_price": 59.63,
-    "computed_at": "2026-06-10T14:39:24.854487+00:00",
+    "current_price": 55.51,
+    "computed_at": "2026-06-10T17:44:06.852745+00:00",
     "support": {
-      "center": 59.1734,
-      "low": 58.9368,
-      "high": 59.4101,
-      "touches": 12,
-      "score": 1.809
+      "center": 54.1064,
+      "low": 53.8899,
+      "high": 54.3228,
+      "touches": 24,
+      "score": 1.2915
     },
     "resistance": {
-      "center": 62.6173,
-      "low": 62.3669,
-      "high": 62.8678,
-      "touches": 8,
-      "score": 0.0069
+      "center": 55.9693,
+      "low": 55.7454,
+      "high": 56.1932,
+      "touches": 13,
+      "score": 0.934
     }
   },
   "MMM": {
     "ticker": "MMM",
-    "current_price": 161.28,
-    "computed_at": "2026-06-10T14:39:25.208479+00:00",
+    "current_price": 157.23,
+    "computed_at": "2026-06-10T17:44:07.219181+00:00",
     "support": {
       "center": 151.8684,
       "low": 151.261,
       "high": 152.4759,
       "touches": 38,
-      "score": 1.1168
+      "score": 1.0788
     },
     "resistance": {
       "center": 167.5718,
@@ -217,116 +217,116 @@
   },
   "MU": {
     "ticker": "MU",
-    "current_price": 947.72,
-    "computed_at": "2026-06-10T14:39:25.551770+00:00",
+    "current_price": 891.16,
+    "computed_at": "2026-06-10T17:44:07.586606+00:00",
     "support": {
       "center": 852.23,
       "low": 848.8211,
       "high": 855.6389,
       "touches": 2,
-      "score": 1.419
+      "score": 1.3707
     },
     "resistance": null
   },
   "NVDA": {
     "ticker": "NVDA",
-    "current_price": 205.9,
-    "computed_at": "2026-06-10T14:39:26.000508+00:00",
+    "current_price": 201.955,
+    "computed_at": "2026-06-10T17:44:07.946650+00:00",
     "support": {
+      "center": 197.1307,
+      "low": 196.3421,
+      "high": 197.9192,
+      "touches": 17,
+      "score": 2.5988
+    },
+    "resistance": {
       "center": 204.9268,
       "low": 204.1071,
       "high": 205.7465,
       "touches": 3,
-      "score": 0.6726
-    },
-    "resistance": {
-      "center": 212.9972,
-      "low": 212.1452,
-      "high": 213.8492,
-      "touches": 3,
-      "score": 0.7116
+      "score": 0.6497
     }
   },
   "PLTR": {
     "ticker": "PLTR",
-    "current_price": 132.28,
-    "computed_at": "2026-06-10T14:39:26.510134+00:00",
+    "current_price": 131.345,
+    "computed_at": "2026-06-10T17:44:08.254263+00:00",
     "support": {
       "center": 125.9821,
       "low": 125.4781,
       "high": 126.486,
       "touches": 23,
-      "score": 2.0858
+      "score": 2.0147
     },
     "resistance": {
       "center": 132.7945,
       "low": 132.2633,
       "high": 133.3257,
       "touches": 14,
-      "score": 1.3886
+      "score": 1.3413
     }
   },
   "SCCO": {
     "ticker": "SCCO",
-    "current_price": 171.25,
-    "computed_at": "2026-06-10T14:39:26.932824+00:00",
+    "current_price": 165.86,
+    "computed_at": "2026-06-10T17:44:08.737881+00:00",
     "support": {
+      "center": 160.6881,
+      "low": 160.0454,
+      "high": 161.3309,
+      "touches": 3,
+      "score": 0.0
+    },
+    "resistance": {
       "center": 165.9997,
       "low": 165.3357,
       "high": 166.6637,
       "touches": 3,
       "score": 0.0001
-    },
-    "resistance": {
-      "center": 176.9018,
-      "low": 176.1942,
-      "high": 177.6094,
-      "touches": 46,
-      "score": 1.9242
     }
   },
   "SMH": {
     "ticker": "SMH",
-    "current_price": 595.27,
-    "computed_at": "2026-06-10T14:39:27.293419+00:00",
+    "current_price": 572.55,
+    "computed_at": "2026-06-10T17:44:09.054245+00:00",
     "support": {
+      "center": 537.375,
+      "low": 535.2255,
+      "high": 539.5245,
+      "touches": 4,
+      "score": 0.5978
+    },
+    "resistance": {
       "center": 579.7549,
       "low": 577.4359,
       "high": 582.0739,
       "touches": 2,
-      "score": 0.0476
-    },
-    "resistance": {
-      "center": 616.8696,
-      "low": 614.4022,
-      "high": 619.3371,
-      "touches": 4,
-      "score": 1.2755
+      "score": 0.046
     }
   },
   "SNDK": {
     "ticker": "SNDK",
-    "current_price": 1743.2,
-    "computed_at": "2026-06-10T14:39:27.649351+00:00",
+    "current_price": 1642.4904,
+    "computed_at": "2026-06-10T17:44:09.329595+00:00",
     "support": {
-      "center": 1699.0,
-      "low": 1692.204,
-      "high": 1705.796,
+      "center": 1543.45,
+      "low": 1537.2762,
+      "high": 1549.6238,
       "touches": 2,
-      "score": 0.7465
+      "score": 0.1008
     },
     "resistance": {
-      "center": 1803.4999,
-      "low": 1796.2859,
-      "high": 1810.7139,
+      "center": 1686.175,
+      "low": 1679.4303,
+      "high": 1692.9197,
       "touches": 2,
-      "score": 1.0501
+      "score": 0.2925
     }
   },
   "TSLA": {
     "ticker": "TSLA",
-    "current_price": 389.75,
-    "computed_at": "2026-06-10T14:39:27.911348+00:00",
+    "current_price": 382.49,
+    "computed_at": "2026-06-10T17:44:09.585895+00:00",
     "support": {
       "center": 368.8322,
       "low": 367.3569,
@@ -339,39 +339,39 @@
       "low": 389.7733,
       "high": 392.904,
       "touches": 31,
-      "score": 1.9854
+      "score": 1.9177
     }
   },
   "VMC": {
     "ticker": "VMC",
-    "current_price": 280.45,
-    "computed_at": "2026-06-10T14:39:28.297618+00:00",
+    "current_price": 274.215,
+    "computed_at": "2026-06-10T17:44:09.894529+00:00",
     "support": {
       "center": 256.6586,
       "low": 255.632,
       "high": 257.6853,
       "touches": 17,
-      "score": 1.2735
+      "score": 1.2301
     },
     "resistance": {
       "center": 284.3145,
       "low": 283.1772,
       "high": 285.4517,
       "touches": 36,
-      "score": 1.2515
+      "score": 1.2089
     }
   },
   "WMT": {
     "ticker": "WMT",
-    "current_price": 118.69,
-    "computed_at": "2026-06-10T14:39:28.731229+00:00",
+    "current_price": 119.65,
+    "computed_at": "2026-06-10T17:44:11.309839+00:00",
     "support": null,
     "resistance": {
-      "center": 120.5795,
-      "low": 120.0972,
-      "high": 121.0618,
-      "touches": 71,
-      "score": 3.4797
+      "center": 120.6437,
+      "low": 120.1611,
+      "high": 121.1263,
+      "touches": 69,
+      "score": 3.3614
     }
   }
 }
