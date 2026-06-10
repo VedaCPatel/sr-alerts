@@ -2,8 +2,8 @@
 sr_zones_module.py
 ------------------
 Loads 'SR Zones.py' via importlib (filename has a space, so direct import fails).
-Re-exports the five core algorithm functions unchanged.
-Uses yfinance for historical OHLCV data, Finnhub /quote for live price.
+Uses fetch_data directly from SR Zones.py so data fetching is 100% identical
+to running the local script (same yf.download call, same prepost=True flag).
 """
 
 import importlib.util
@@ -14,13 +14,13 @@ from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
 import requests
-import yfinance as yf
 
 _HERE = pathlib.Path(__file__).parent
 _SPEC = importlib.util.spec_from_file_location("sr_zones", _HERE / "SR Zones.py")
 _MODULE = importlib.util.module_from_spec(_SPEC)
 _SPEC.loader.exec_module(_MODULE)
 
+fetch_data     = _MODULE.fetch_data
 find_pivots    = _MODULE.find_pivots
 cluster_pivots = _MODULE.cluster_pivots
 score_cluster  = _MODULE.score_cluster
@@ -39,22 +39,13 @@ ROUND_DECIMALS           = _MODULE.ROUND_DECIMALS
 FINNHUB_API_KEY = os.getenv("FINNHUB_API_KEY", "d8klglpr01qjgd71hcfgd8klglpr01qjgd71hcg0")
 
 
-def _fetch_candles(symbol: str) -> pd.DataFrame | None:
-    try:
-        df = yf.download(symbol, period=PERIOD, interval=INTERVAL, progress=False, auto_adjust=True)
-        if df.empty:
-            print(f"  [{symbol}] yfinance returned empty data")
-            return None
-        df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
-        df = df[["Open", "High", "Low", "Close", "Volume"]].dropna().reset_index(drop=True)
-        return df
-    except Exception as e:
-        print(f"  [{symbol}] yfinance error: {e}")
-        return None
-
-
 def get_sr_zones(ticker: str) -> dict:
-    df = _fetch_candles(ticker)
+    try:
+        df = fetch_data(ticker, PERIOD, INTERVAL)
+    except Exception as e:
+        print(f"  [{ticker}] fetch_data error: {e}")
+        df = None
+
     if df is None or len(df) < PIVOT_LOOKBACK * 3:
         return {"ticker": ticker, "current_price": None, "computed_at": datetime.now(timezone.utc).isoformat(), "support": None, "resistance": None}
 
