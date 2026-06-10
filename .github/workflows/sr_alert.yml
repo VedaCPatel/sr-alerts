@@ -1,0 +1,49 @@
+name: SR Zone Alert Monitor
+
+on:
+  schedule:
+    # Every minute, Mon–Fri, 8am–11:59pm UTC  (covers 4am–7:59pm ET)
+    - cron: "* 8-23 * * 1-5"
+    # Every minute, Tue–Sat, midnight–1am UTC  (covers 8pm–9pm ET previous day)
+    - cron: "* 0 * * 2-6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-alerts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run SR alert monitor
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          FINNHUB_API_KEY:     ${{ secrets.FINNHUB_API_KEY }}
+        run: python sr_alert_monitor.py
+
+      - name: Commit updated state files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add zone_cache.json alert_state.json
+          git diff --staged --quiet || (
+            git commit -m "chore: update state [skip ci]" &&
+            git pull --rebase &&
+            git push
+          )
