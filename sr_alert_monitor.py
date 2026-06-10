@@ -77,11 +77,28 @@ def get_live_price(ticker: str) -> float | None:
     # 1. yfinance live price (primary — accurate, real-time)
     try:
         import yfinance as yf
+
+        # Try the most recent 1-minute candle close (works during market hours,
+        # includes pre/post via prepost=True)
+        intraday = yf.download(
+            ticker, period="1d", interval="1m",
+            progress=False, auto_adjust=True, prepost=True,
+        )
+        if not intraday.empty:
+            cols = [c[0] if isinstance(c, tuple) else c for c in intraday.columns]
+            intraday.columns = cols
+            price = float(intraday["Close"].dropna().iloc[-1])
+            if price > 0:
+                print(f"  [{ticker}] yfinance 1m close: ${price:.4f}")
+                return price
+
+        # Fallback to fast_info if intraday is empty
         fi = yf.Ticker(ticker).fast_info
         price = fi.get("last_price") if hasattr(fi, "get") else fi["last_price"]
         if price and price > 0:
-            print(f"  [{ticker}] yfinance live price: ${float(price):.4f}")
+            print(f"  [{ticker}] yfinance fast_info: ${float(price):.4f}")
             return float(price)
+
         print(f"  [{ticker}] yfinance returned no price — trying Finnhub.")
     except Exception as e:
         print(f"  [{ticker}] yfinance live price error: {e} — trying Finnhub.")
