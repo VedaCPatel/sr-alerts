@@ -1,0 +1,49 @@
+name: Robinhood Ticker Sync
+
+on:
+  schedule:
+    # Every 15 min, Mon–Fri, 8am–11:59pm UTC  (covers 4am–7:59pm ET)
+    - cron: "*/15 8-23 * * 1-5"
+    # Every 15 min, Tue–Sat, midnight–1am UTC  (covers 8pm–9pm ET previous day)
+    - cron: "*/15 0 * * 2-6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-tickers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch Robinhood tickers
+        env:
+          RH_USERNAME: ${{ secrets.RH_USERNAME }}
+          RH_PASSWORD: ${{ secrets.RH_PASSWORD }}
+        run: python robinhood_fetcher.py
+
+      - name: Commit tickers.json and session pickle
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tickers.json rh_session.pickle 2>/dev/null || git add tickers.json
+          git diff --staged --quiet || (
+            git commit -m "chore: update tickers.json [skip ci]" &&
+            git pull --rebase &&
+            git push
+          )
