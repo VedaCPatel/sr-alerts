@@ -81,7 +81,8 @@ def _fetch_finnhub_candles(symbol: str) -> pd.DataFrame | None:
         return None
 
     if data.get("s") != "ok":
-        print(f"  [{symbol}] Finnhub candle status: {data.get('s')} — skipping")
+        print(f"  [{symbol}] Finnhub candle status: {data.get('s')} — response: {data} — key: {FINNHUB_API_KEY[:10]}...")
+
         return None
 
     df = pd.DataFrame({
