@@ -62,11 +62,18 @@ def get_watchlist_tickers() -> list:
         for wl in wls["results"]:
             name = wl.get("display_name", "")
             try:
-                items = rh.get_watchlist_by_name(name) or []
+                raw = rh.get_watchlist_by_name(name)
+                if isinstance(raw, dict):
+                    items = raw.get("results", [])
+                elif isinstance(raw, list):
+                    items = raw
+                else:
+                    items = []
+
                 symbols = []
                 for item in items:
                     if isinstance(item, dict):
-                        sym = item.get("symbol") or item.get("ticker") or item.get("slug")
+                        sym = item.get("symbol") or item.get("ticker")
                         if not sym:
                             instrument_url = item.get("instrument") or item.get("instrument_url", "")
                             if instrument_url:
@@ -79,6 +86,7 @@ def get_watchlist_tickers() -> list:
                             symbols.append(sym.upper())
                     elif isinstance(item, str):
                         symbols.append(item.upper())
+
                 print(f"  Watchlist '{name}': {len(symbols)} tickers — {symbols}")
                 tickers.extend(symbols)
             except Exception as e:
