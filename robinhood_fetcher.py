@@ -51,6 +51,7 @@ def get_portfolio_tickers() -> list:
         print(f"  WARNING: Could not fetch portfolio: {e}")
         return []
 
+
 def get_watchlist_tickers() -> list:
     tickers = []
     try:
@@ -59,15 +60,32 @@ def get_watchlist_tickers() -> list:
             print("  WARNING: No watchlists returned.")
             return []
         for wl in wls["results"]:
-            name  = wl.get("display_name", "")
-            items = rh.get_watchlist_by_name(name, info="symbol") or []
-            print(f"  Watchlist '{name}': {len(items)} tickers")
-            tickers.extend(items)
+            name = wl.get("display_name", "")
+            try:
+                items = rh.get_watchlist_by_name(name) or []
+                symbols = []
+                for item in items:
+                    if isinstance(item, dict):
+                        sym = item.get("symbol") or item.get("ticker") or item.get("slug")
+                        if not sym:
+                            instrument_url = item.get("instrument") or item.get("instrument_url", "")
+                            if instrument_url:
+                                try:
+                                    inst = rh.get_instrument_by_url(instrument_url)
+                                    sym = inst.get("symbol") if inst else None
+                                except Exception:
+                                    pass
+                        if sym:
+                            symbols.append(sym.upper())
+                    elif isinstance(item, str):
+                        symbols.append(item.upper())
+                print(f"  Watchlist '{name}': {len(symbols)} tickers — {symbols}")
+                tickers.extend(symbols)
+            except Exception as e:
+                print(f"  WARNING: Could not fetch watchlist '{name}': {e}")
     except Exception as e:
         print(f"  WARNING: Could not fetch watchlists: {e}")
     return tickers
-
-
 
 
 def save_tickers(tickers: list) -> None:
@@ -78,7 +96,7 @@ def save_tickers(tickers: list) -> None:
 
 
 def main() -> None:
-    assert_trading_day()  # exits cleanly if holiday, weekend, or outside 4am–8pm ET
+    assert_trading_day()
 
     if not RH_USERNAME or not RH_PASSWORD:
         print("ERROR: RH_USERNAME and RH_PASSWORD must be set.")
