@@ -1,1 +1,149 @@
-{}
+{
+  "AAPL": {
+    "ticker": "AAPL",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.012042+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "AMZN": {
+    "ticker": "AMZN",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.070352+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "BABA": {
+    "ticker": "BABA",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.127806+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "BE": {
+    "ticker": "BE",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.181702+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "COF": {
+    "ticker": "COF",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.235152+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "CRDO": {
+    "ticker": "CRDO",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.287128+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "ERO": {
+    "ticker": "ERO",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.348061+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "FCX": {
+    "ticker": "FCX",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.411461+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "GOOGL": {
+    "ticker": "GOOGL",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.459413+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "INTC": {
+    "ticker": "INTC",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.519839+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "LMND": {
+    "ticker": "LMND",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.578419+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "MMM": {
+    "ticker": "MMM",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.636032+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "MU": {
+    "ticker": "MU",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.689175+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "NVDA": {
+    "ticker": "NVDA",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.753749+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "PLTR": {
+    "ticker": "PLTR",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.816816+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "SCCO": {
+    "ticker": "SCCO",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.864810+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "SMH": {
+    "ticker": "SMH",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.924301+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "SNDK": {
+    "ticker": "SNDK",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:42.977173+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "TSLA": {
+    "ticker": "TSLA",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:43.030631+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "VMC": {
+    "ticker": "VMC",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:43.113410+00:00",
+    "support": null,
+    "resistance": null
+  },
+  "WMT": {
+    "ticker": "WMT",
+    "current_price": null,
+    "computed_at": "2026-06-10T12:31:43.162976+00:00",
+    "support": null,
+    "resistance": null
+  }
+}
